@@ -1,32 +1,46 @@
-const path = require('path');
-const dist = path.resolve(__dirname, 'dist');
+const path = require("path");
+const dist = path.resolve(__dirname, "dist");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const HtmlWebpackHarddiskPlugin = require("html-webpack-harddisk-plugin");
 
 module.exports = {
-  entry: './src/index.ts',
-  mode: 'development',
+  entry: "./src/index.ts",
+  mode: "development",
   watch: true,
   module: {
     rules: [
       {
         test: /\.tsx?$/,
-        loader: 'ts-loader',
+        loader: "ts-loader",
         exclude: /node_modules/,
         options: {
-          configFile: 'tsconfig.json',
-        },
-      },
-    ],
+          configFile: "tsconfig.json"
+        }
+      }
+    ]
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
+    extensions: [".tsx", ".ts", ".js"]
   },
   output: {
-    filename: 'bundle.js',
-    path: dist,
+    filename: "bundle.js",
+    path: dist
   },
   devServer: {
     contentBase: dist,
     compress: true,
-    port: 8080,
+    port: 8080
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: "LitHTML Typescript Example",
+      filename: "index.html",
+      template: "src/index.html",
+      alwaysWriteToDisk: true,
+      minify: false
+    }),
+    new HtmlWebpackHarddiskPlugin({
+      outputPath: path.resolve(__dirname, "dist")
+    })
+  ]
 };
