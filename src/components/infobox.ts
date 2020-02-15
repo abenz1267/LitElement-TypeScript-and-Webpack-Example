@@ -1,9 +1,9 @@
-import { LitElement, html, customElement, property } from 'lit-element';
+import { LitElement, html, customElement, property } from "lit-element";
 
-@customElement('text-box')
-export class Infobox extends LitElement {
-  @property({ type: String }) content = '';
-  @property({ type: String }) id = '';
+@customElement("text-box")
+export class TextBox extends LitElement {
+  @property({ type: String }) content: string = "";
+  @property({ type: String }) id: string = "";
 
   render() {
     return html`
