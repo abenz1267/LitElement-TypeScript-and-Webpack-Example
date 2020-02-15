@@ -14,8 +14,8 @@
     "lit-element": "^2.2.1",
     "ts-loader": "^5.4.5",
     "typescript": "^3.7.5",
-    "webpack": "^4.41.5",
-    "webpack-cli": "^3.3.10",
-    "webpack-dev-server": "^3.10.1"
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
   }
 }
