@@ -11,10 +11,10 @@
   "devDependencies": {
     "html-webpack-harddisk-plugin": "^1.0.2",
     "html-webpack-plugin": "^3.2.0",
-    "lit-element": "^2.3.1",
+    "lit-element": "^2.4.0",
     "ts-loader": "^5.4.5",
     "typescript": "^3.9.7",
-    "webpack": "^4.44.1",
+    "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
   }
